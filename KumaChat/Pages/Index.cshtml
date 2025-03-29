@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "クマとおはなし";
+}
+
+<form method="post">
+    <div>
+        <img src="@Model.KumaImageFile" alt="クマ1" width="5%" height="5%" /><font size=5>@Model.KumaMessage</font>
+    </div>
+    <HR>
+    <div>
+        <input type="text"
+               id="textbox1"
+               name="MyMessage"
+               required
+               minlength="1"
+               maxlength="50"
+               size="50"
+               value="@Model.MyMessage" />
+        <input type="submit" class="btn btn-primary" />
+    </div>
+</form>
